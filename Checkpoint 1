@@ -1,0 +1,83 @@
+Exercice 1 Fichier 1
+
+    1. Donner l'adresse MAC destinataire
+08:00:27:8c:21:84
+
+    2. Donner l'adresse MAC source
+08:00:27:fd:3b:50
+
+    3. Donner l'ethertype et en déduire le protocole encapsulé dans la trame ethernet
+Type: ARP (0x0806)
+    Où peux-tu également trouver cette information dans la fenêtre Wireshark ?
+Je trouve cette information dans le 17 et 18ème octet pour le paquet 1
+
+    4. Y-a-t'il des bits de bourrage ? Si oui, donne les numéros des paquets (dans la colonne N°.) concernés et l'emplacement où tu as eu cette information.
+N°1 & N°4, car les paquets sont inférieurs à 60 octets de longueur.
+
+
+    5. Suivant le protocole encapsulé, donner les informations le concernant en suivant la trame du paquet concerné.
+ Les informations recherchées sont 0x0806 pour de l’ARP
+       
+    6. Sur quelle couche se trouve le protocole encapsulé ?
+Le protocole ARP se trouve sur la couche 3
+
+Exercice 1 Fichier 2
+       
+    1. Donner l'adresse MAC destinataire
+08:00:27:fd:3b:50
+       
+    2. Donner l'adresse MAC source
+08:00:27:8c:21:84
+       
+    3. Donner l'ethertype et en déduire le protocole encapsulé dans la trame ethernet.
+Type : IPv4 (0x0800)
+       
+        Où peux-tu également trouver cette information dans la fenêtre Wireshark ?
+Je trouve cette information dans le 13 et 14ème octet pour le paquet 1
+
+    4. Y-a-t'il des bits de bourrage ? Si oui, donne les numéros des paquets (dans la colonne N°.) concernés et l'emplacement où tu as eu cette information.
+Je rajoute 6 bits de bourrage sur les touts les paquets.
+
+    5. Suivant le protocole encapsulé, donner les informations le concernant en suivant la trame du paquet concerné.
+Les informations recherchées sont 0x0800 pour de l’ipv4
+       
+    6. Sur quelle couche se trouve le protocole encapsulé ?
+Le protocole IP se trouve sur la couche 3
+
+       Exercice 2
+Sauvegarder le code suivant en usersDell.sh
+
+#!/bin/bash
+
+read supprimer_user
+sudo userdel -r $supprimer_user
+cat /etc/passwd
+
+fi
+done
+
+       Exercice 3
+
+Pourquoi les adresses IP 192.168.1.50/24 et 192.168.2.51/24 ne peuvent pas communiquer ? Donne un exemple de masque de sous-réseau leur permettant de communiquer. Donne également la notation CIDR.
+
+Ces 2 adresses ip ne sont pas sur le même sous réseau, c’est du au masque de sous réseau.
+Un CIDR /22 permet la communication des deux machines qui serait au sein du meme sous réseau.
+
+    • Quel protocole permet de résoudre 192.168.10.1 en 08:AA:0A:01:AE:2E ?
+ARP
+    • A quoi sert un routeur ?
+Le routeur sert de passerelle entre le réseau privé et le réseau public et peut également aiguiller les paquets au sein d’un réseau local.
+    • Comment appelle-t-on les adresses des éléments connectés dans un même réseau local (LAN) ?
+C’est une adresse privé de classe a, b ou c.
+    • Qu'est-ce qui permet d’attribuer des adresses IP dynamiques ?
+Le Dynamic Host Configuration Protocol permet l’attribution d’adresses ip dynamique.
+    • Donne une ligne de code shell qui permet de filtrer la liste des utilisateurs.
+
+    • Donne un exemple de shebang
+Shebang pour un script bash : #!/bin/bash
+    • Quelle commande permet de changer les droits du fichier myfile en rwxr—r-- ?
+
+    • Que peux tu dire sur le matériel /dev/sdb2 ?
+C’est une partition du disque dur.
+    • Quelle est l'adresse simplifiée de 2001:0001:0000:0000:00AF:0000:D00B:00AD ?
+2001:0001::AF::D00B:00AD
